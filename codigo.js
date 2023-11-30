@@ -11,6 +11,18 @@ function misEventos() {
   document
     .querySelector("#btnSumarej3")
     .addEventListener("click", sumarTresValores);
+
+  document
+    .querySelector("#btnSumarYMultiplicar")
+    .addEventListener("click", sumarYMultiplicarDosValores);
+
+  document
+    .querySelector("#btnCalcularAreaej5")
+    .addEventListener("click", calcularAreaDeCuadrado);
+
+  document
+    .querySelector("#btnCalcularEquivalenteEnDolar")
+    .addEventListener("click", calcularCambioDePesosADolares);
 }
 
 //ejercicio 1
@@ -44,3 +56,26 @@ function sumarTresValores() {
 }
 
 // ejercicio 4
+function sumarYMultiplicarDosValores() {
+  let valor1txt = document.querySelector("#txtValor1ej4").value;
+  let valor2txt = document.querySelector("#txtValor2ej4").value;
+  let valor1Num = Number(valor1txt);
+  let valor2Num = Number(valor2txt);
+  let sumarValores = valor1Num + valor2Num;
+  let multiplicarValores = valor1Num * valor2Num;
+  document.querySelector("#txtMostrarSumaEj4").innerHTML =
+    "La Suma es: " + sumarValores;
+  document.querySelector("#txtMostrarMultiplicacionEj4").innerHTML =
+    "La Multiplicación es: " + multiplicarValores;
+}
+
+// ejercicio 5
+function calcularAreaDeCuadrado() {
+  let valor1txt = document.querySelector("#txtValorej5").value;
+  let valor1Num = Number(valor1txt);
+  let areaCuadrado = valor1Num * valor1Num;
+  document.querySelector("#txtMostrarAreaEje5").innerHTML =
+    "El área del Cuadrado es: " + areaCuadrado;
+}
+
+// ejercicio 6
